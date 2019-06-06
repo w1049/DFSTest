@@ -1,0 +1,43 @@
+body {
+    font-family: "Consolas";
+}
+
+div.cell {
+    box-sizing: border-box;
+    border: 1px solid;
+    float: left;
+    text-align: center;
+    line-height: 1;
+}
+
+div.back:after {
+    content: "X";
+    color: #FFF;
+}
+
+div.ball {
+    position: absolute;
+}
+
+div.Rcolor {
+    background-color: red;
+}
+
+div.Gcolor {
+    background-color: green;
+}
+
+div.Wcolor {
+    background-color: lightgreen;
+}
+
+div.Bcolor {
+    background-color: blue;
+}
+
+div.Small {
+    height: 16px;
+    width: 16px;
+}
+
+div.float{margin:0 auto;}

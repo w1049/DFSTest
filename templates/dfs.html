@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>DFS TEST</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/semantic-ui/2.4.1/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/block.css">
+	<script src="/static/var.js"></script>
+	<script src="/static/map.js"></script>
+	<script src="/static/dfs.js"></script>
+	<script src="/static/main.js"></script>
+</head>
+
+<body>
+	<div id="maincontainer" class="ui main container">
+		<h1 id="title1" class="ui header">没什么用处的网页</h1>
+		<div id="mapcontainer" class="ui container float segment stacked float" depend="1"></div>
+		<div id="other" class="ui container">
+			<p id="demo" class="fluid ui left aligned text container" onclick="invertColor()">this is a message</p>
+			<div class="ui fluid buttons" depend="1">
+				<button id="btn" class="ui button" depend="1" onclick="go()">下一步</button>
+				<button id="btn2" class="ui button" depend="1">自动</button>
+			</div>
+			<br /><br />
+			<div class="ui fluid action right labeled input" depend="1">
+				<button id="btn3" class="ui button">改变速度</button>
+				<input id="in1" style="width:50%" type="text" placeholder="Speed..." oninput="value=value.replace(/[^\d]/g,'')"></input>
+				<div class="ui basic label">ms</div>
+			</div>
+			<br /><br />
+			<div class="ui fluid buttons" depend="1">
+				<button id="btns1" class="ui button">设置障碍</button>
+				<button id="btns2" class="ui button">设置起点</button>
+				<button id="btns3" class="ui button">设置终点</button>
+			</div>
+			<div class="ui left aligned container" depend="2">
+				<div class="cell Wcolor Small"></div>
+				<div>可通过</div>
+				<div class="cell Rcolor Small"></div>
+				<div>障碍</div>
+				<div class="cell Bcolor Small"></div>
+				<div>当前位置</div>
+				<div class="cell Gcolor Small"></div>
+				<div>经过</div>
+				<div class="cell back Gcolor Small"></div>
+				<div>返回</div>
+				<div class="cell Wcolor Small">S</div>
+				<div>起点</div>
+				<div class="cell Wcolor Small">E</div>
+				<div>终点</div>
+			</div>
+			<button id="defaultbutton" class="ui button" depend="3">点一下这个吧(Default Map)</button>
+			<div class="ui action input">
+				<input id="in2" type="text" placeholder="Size..."oninput="value=value.replace(/[^\d]/g,'')" depend="3"></input>
+				<button id="btn4" class="ui button" depend="3">Set Size And Generate</button>
+			</div>
+			<div class="ui action input">
+				<input id="in3" type="text" placeholder="Name..." depend="3"></input>
+				<button id="btn5" class="ui button" depend="3">Local Load</button>
+				<button id="btn6" class="ui button" depend="3">Remote Load</button>
+			</div>
+			<button id="btn7" class="ui button" depend="3" disabled=true>Display Remote List</button>
+		</div>
+		<div class="ui horizontal divider">Made By w1049</div>
+		<button id="debug" class="fluid ui button">DEBUG</button>
+		<button id="hehe" class="fluid ui button">INTERESTING</button>
+	</div>
+</body>
+
+</html>
